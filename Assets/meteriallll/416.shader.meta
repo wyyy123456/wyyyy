@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 785c9139baea34c3cab9a0fb6391e06e
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _MainTex: {instanceID: 0}
+  - _BumpMap: {instanceID: 0}
+  - _MaskTex: {instanceID: 0}
+  - _MSTTex: {instanceID: 0}
+  - _OTETex: {instanceID: 0}
+  - _MatCapTex: {instanceID: 0}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
