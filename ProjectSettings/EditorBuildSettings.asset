@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/main scenes.unity
     guid: 2707aed14d9de4fb4a1ed804ab99dab9
-  - enabled: 0
+  - enabled: 1
     path: Assets/dine2.unity
     guid: 47ae3d911272d4ade860a8b6e138ffe4
-  - enabled: 1
+  - enabled: 0
     path: Assets/carteen1.unity
     guid: b0b26cb228fc44fbeb385e73276f06fb
   - enabled: 0

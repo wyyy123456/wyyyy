@@ -148,8 +148,10 @@ Material:
     - _ToonRampSmoothness: 0.09
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _constrast: 0
     - _nor1strength: 0.09
     - _nor2stre: 0.02
+    - _saturation: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

@@ -22,8 +22,8 @@ public class DianFenAnim : MonoBehaviour
         {
             skin.SetBlendShapeWeight(0, i);
             yield return null;
-            yield return null;
-            yield return null;
+            
+            
         }
         
 

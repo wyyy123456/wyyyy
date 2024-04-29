@@ -150,7 +150,7 @@ Material:
     - _ZWrite: 1
     - _constrast: -0.54
     - _nor1strength: 0
-    - _nor2stre: 2.18
+    - _nor2stre: 0.25
     - _saturation: 1.24
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
