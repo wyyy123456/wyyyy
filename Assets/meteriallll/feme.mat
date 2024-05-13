@@ -149,7 +149,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RamLightBrightness: 0.58
-    - _Rampower: 0.4
+    - _Rampower: -0.73
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0

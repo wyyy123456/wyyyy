@@ -88,7 +88,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _mask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3d9caaf15f88745d9bffc3b920520d43, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _metallic:
@@ -161,7 +161,7 @@ Material:
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _Tilling: {r: 1, g: 1, b: 0, a: 0}
-    - _ToonRampTinting: {r: 0.7913849, g: 0.90390307, b: 0.9811321, a: 0}
+    - _ToonRampTinting: {r: 0.36320752, g: 0.8053893, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1842787778527943221
 MonoBehaviour:

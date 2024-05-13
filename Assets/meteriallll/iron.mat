@@ -139,7 +139,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RamLightBrightness: 7.2
-    - _Rampower: 3.98
+    - _Rampower: 3.56
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -147,7 +147,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _ToonRampOffset: 0.48
+    - _ToonRampOffset: 0.43
     - _ToonRampSmoothness: 0
     - _WorkflowMode: 1
     - _ZWrite: 1

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6037848375349207145}
   m_Layer: 0
   m_Name: WaterSolein
-  m_TagString: Water
+  m_TagString: WaterSolein
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,6 +8,8 @@ TagManager:
   - Flame
   - Destroyer
   - WaterSolein
+  - WaterFat
+  - WaterRed
   layers:
   - Default
   - TransparentFX

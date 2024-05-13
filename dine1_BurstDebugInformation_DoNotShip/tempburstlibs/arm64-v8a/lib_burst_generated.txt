@@ -1,4 +1,4 @@
-Library: /Users/wyy/Downloads/wyyyy-main/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
+Library: /Users/wyy/Documents/wyyyy/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
 --platform=Android
 --backend=burst-llvm-15
 --target=ARMV8A_AARCH64
@@ -24,7 +24,6 @@ Library: /Users/wyy/Downloads/wyyyy-main/Temp/BurstOutput/tempburstlibs/arm64-v8
 --assembly-defines=Unity.RenderPipelines.Core.Runtime;
 --assembly-defines=Unity.RenderPipelines.Universal.Runtime;
 --assembly-defines=Unity.TextMeshPro;
---assembly-defines=Unity.Timeline;
 --assembly-defines=Unity.XR.Content.Interaction;
 --assembly-defines=Unity.XR.CoreUtils;
 --assembly-defines=Unity.XR.Interaction.Toolkit;
@@ -34,10 +33,10 @@ Library: /Users/wyy/Downloads/wyyyy-main/Temp/BurstOutput/tempburstlibs/arm64-v8
 --assembly-defines=Unity.XR.PICO;
 --assembly-defines=UnityEngine;
 --generate-link-xml=Temp/burst.link.xml
---temp-folder=/Users/wyy/Downloads/wyyyy-main/Temp/Burst
+--temp-folder=/Users/wyy/Documents/wyyyy/Temp/Burst
 --key-folder=/Applications/Unity/Hub/Editor/2022.3.17f1c1/PlaybackEngines/AndroidPlayer
---decode-folder=/Users/wyy/Downloads/wyyyy-main/Library/Burst
---output=/Users/wyy/Downloads/wyyyy-main/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
+--decode-folder=/Users/wyy/Documents/wyyyy/Library/Burst
+--output=/Users/wyy/Documents/wyyyy/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=UnityEngine.XR.Interaction.Toolkit.Utilities.BurstMathUtility, Unity.XR.Interaction.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ProjectOnPlane(Unity.Mathematics.float3&, Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Mathematics.float3&, Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Mathematics.float3&, Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)--1819bc9925667b008fd6c3e6019ccf71
@@ -126,7 +125,6 @@ Library: /Users/wyy/Downloads/wyyyy-main/Temp/BurstOutput/tempburstlibs/arm64-v8
 --assembly-defines=Unity.RenderPipelines.Core.Runtime;
 --assembly-defines=Unity.RenderPipelines.Universal.Runtime;
 --assembly-defines=Unity.TextMeshPro;
---assembly-defines=Unity.Timeline;
 --assembly-defines=Unity.XR.Content.Interaction;
 --assembly-defines=Unity.XR.CoreUtils;
 --assembly-defines=Unity.XR.Interaction.Toolkit;
@@ -136,10 +134,10 @@ Library: /Users/wyy/Downloads/wyyyy-main/Temp/BurstOutput/tempburstlibs/arm64-v8
 --assembly-defines=Unity.XR.PICO;
 --assembly-defines=UnityEngine;
 --generate-link-xml=Temp/burst.link.xml
---temp-folder=/Users/wyy/Downloads/wyyyy-main/Temp/Burst
+--temp-folder=/Users/wyy/Documents/wyyyy/Temp/Burst
 --key-folder=/Applications/Unity/Hub/Editor/2022.3.17f1c1/PlaybackEngines/AndroidPlayer
---decode-folder=/Users/wyy/Downloads/wyyyy-main/Library/Burst
---output=/Users/wyy/Downloads/wyyyy-main/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
+--decode-folder=/Users/wyy/Documents/wyyyy/Library/Burst
+--output=/Users/wyy/Documents/wyyyy/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobForExtensions+ForJobStruct`1[[UnityEngine.Rendering.Universal.ZBinningJob, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.Rendering.Universal.ZBinningJob&, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--77fc393cb521ac129b1392d4eb94d29a
