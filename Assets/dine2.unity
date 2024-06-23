@@ -11289,6 +11289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OuterBound
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e41b0930742408c4cb5388a81c61e987, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2438656852951536746, guid: e41b0930742408c4cb5388a81c61e987, type: 3}
       propertyPath: m_LocalScale.x
       value: 102
