@@ -152,7 +152,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _constrast: 0
-    - _nor1strength: 3.68
+    - _nor1strength: 1.03
     - _nor2stre: 0.5
     - _saturation: 0
     m_Colors:

@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: 53782ed7ed21c4ed086314710954fef8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 127c13cea58ce45ba8c8aab7b2652452, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -173,5 +173,5 @@ Material:
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _Tilling: {r: 0.7, g: 1, b: 0, a: 0}
-    - _ToonRampTinting: {r: 0.2688679, g: 0.6329777, b: 1, a: 0}
+    - _ToonRampTinting: {r: 0.32395872, g: 0.6864555, b: 0.754717, a: 0}
   m_BuildTextureStacks: []

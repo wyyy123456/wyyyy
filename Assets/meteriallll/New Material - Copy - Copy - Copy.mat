@@ -37,11 +37,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AO:
-        m_Texture: {fileID: 2800000, guid: 9bdc30dcae2d041b088e881c916f6cc1, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: 2361bee9c594745be948398561f980a0, type: 3}
+        m_Texture: {fileID: 2800000, guid: d967f13cc47894c3a8d8dfed30bf4bb1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -77,11 +77,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal1:
-        m_Texture: {fileID: 2800000, guid: b4aec0f6b73144d1580c5a4c06ac2bff, type: 3}
+        m_Texture: {fileID: 2800000, guid: d967f13cc47894c3a8d8dfed30bf4bb1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal2:
-        m_Texture: {fileID: 2800000, guid: 35ed593ad76224d7199f90a5d04c8e6a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -97,7 +97,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 2361bee9c594745be948398561f980a0, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _mask:
@@ -105,11 +105,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _metallic:
-        m_Texture: {fileID: 2800000, guid: 8fc4af0967ccc4fdda5671016778db2f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _smoothness:
-        m_Texture: {fileID: 2800000, guid: e863bb9b949eb42c09645a71da1949c6, type: 3}
+        m_Texture: {fileID: 2800000, guid: d967f13cc47894c3a8d8dfed30bf4bb1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -162,15 +162,16 @@ Material:
     - _ToonRampSmoothness: 0.05
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _constrast: 0.58
-    - _nor1strength: 11.08
-    - _nor2stre: 0.25
+    - _constrast: 1
+    - _nor1strength: 1
+    - _nor2stre: 1
+    - _saturation: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Offset: {r: 0.43, g: -1.02, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Tilling: {r: 3, g: 2, b: 0, a: 0}
-    - _ToonRampTinting: {r: 0.6117647, g: 0.6321554, b: 0.90588236, a: 0}
+    - _Tilling: {r: 2.5, g: 2, b: 0, a: 0}
+    - _ToonRampTinting: {r: 0.53813636, g: 0.72443104, b: 0.8207547, a: 0}
   m_BuildTextureStacks: []
