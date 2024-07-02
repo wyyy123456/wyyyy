@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6370045456896909883
+--- !u!114 &-6533366713154629219
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15,19 +15,19 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 1.2
+    m_Value: 0
   contrast:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 5
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 0.8632076, g: 0.9012054, b: 1, a: 1}
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 15
   saturation:
     m_OverrideState: 1
-    m_Value: 31
+    m_Value: 5
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: 1063286391614437393}
-  - {fileID: -6370045456896909883}
+  - {fileID: -6533366713154629219}
 --- !u!114 &1063286391614437393
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -61,13 +61,13 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.82
+    m_Value: 1.22
   intensity:
     m_OverrideState: 1
-    m_Value: 0.32
+    m_Value: 0.42
   scatter:
     m_OverrideState: 1
-    m_Value: 0.218
+    m_Value: 0.143
   clamp:
     m_OverrideState: 0
     m_Value: 65472
