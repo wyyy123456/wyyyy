@@ -8,14 +8,10 @@ public class GripbuttonToPrint : MonoBehaviour
     public Transform spawnLocation;
     public GameObject currentObjectInstance;
     public GameObject newObjectPrefab;
-    public GameObject secondObjectPrefab; // 新增第二个物体的预制体
     public Transform replacementPosition;
-    public Transform secondReplacementPosition; // 第二个物体的替换位置
     public float replacementDelay = 2f; // 替换延迟时间
     float counter = 2.0f;
-
     public string excludeChildName = "Quad1"; // 设置不想被渲染的子物体名字
-
 
 
     public void PlayPrintAnim()
@@ -52,18 +48,14 @@ public class GripbuttonToPrint : MonoBehaviour
 
     public void RenderObjects()
     {
-        // 渲染第一个物体
-        if (currentObjectInstance != null && newObjectPrefab != null && replacementPosition != null)
+        // 确保有一个新的物体实例化
+        if (newObjectPrefab != null)
         {
-            // 禁用当前物体的渲染器
-            Renderer[] renderers = currentObjectInstance.GetComponentsInChildren<Renderer>();
-            foreach (Renderer renderer in renderers)
-            {
-                renderer.enabled = false;
-            }
+            // 实例化新物体
+            GameObject newObjectInstance = Instantiate(newObjectPrefab, replacementPosition.position, replacementPosition.rotation);
 
             // 启用新物体的渲染器，但排除特定子物体
-            Renderer[] newRenderers = newObjectPrefab.GetComponentsInChildren<Renderer>();
+            Renderer[] newRenderers = newObjectInstance.GetComponentsInChildren<Renderer>();
             foreach (Renderer renderer in newRenderers)
             {
                 if (renderer.gameObject.name != excludeChildName)
@@ -72,40 +64,17 @@ public class GripbuttonToPrint : MonoBehaviour
                 }
             }
 
-            // 将新物体放置到替换位置
-            newObjectPrefab.transform.position = replacementPosition.position;
-            newObjectPrefab.transform.rotation = replacementPosition.rotation;
-
             // 设置新物体的父级为当前物体的父级
-            newObjectPrefab.transform.SetParent(replacementPosition.parent);
+            newObjectInstance.transform.SetParent(replacementPosition.parent);
 
-            // 销毁当前物体
-            Destroy(currentObjectInstance);
-
-            // 更新 currentObjectInstance 引用为新物体实例
-            currentObjectInstance = newObjectPrefab;
-        }
-
-        // 渲染第二个物体
-        if (secondObjectPrefab != null && secondReplacementPosition != null)
-        {
-            // 实例化第二个物体并禁用渲染器
-            GameObject secondObjectInstance = Instantiate(secondObjectPrefab, secondReplacementPosition.position, secondReplacementPosition.rotation);
-            Renderer[] secondRenderers = secondObjectInstance.GetComponentsInChildren<Renderer>();
-            foreach (Renderer renderer in secondRenderers)
+            // 销毁当前物体实例
+            if (currentObjectInstance != null)
             {
-                if (renderer.gameObject.name != excludeChildName)
-                {
-                    renderer.enabled = false;
-                }
+                Destroy(currentObjectInstance.gameObject);
             }
 
-            // 将第二个物体放置到第二替换位置
-            secondObjectInstance.transform.position = secondReplacementPosition.position;
-            secondObjectInstance.transform.rotation = secondReplacementPosition.rotation;
-
-            // 设置第二个物体的父级为当前物体的父级
-            secondObjectInstance.transform.SetParent(secondReplacementPosition.parent);
+            // 更新 currentObjectInstance 引用为新物体实例
+            currentObjectInstance = newObjectInstance;
         }
     }
 }

@@ -9,21 +9,13 @@ public class smzmove : MonoBehaviour
     public Animator secondObjectAnimator;
     float counter = 2.0f;
 
-    private void Update()
-    {
-        counter -= Time.deltaTime;
-        if (counter <= 0)
-        {
-            counter = 10.0f;
-            PlayPrintAnim();
-            PlaySecondObjectAnim();
-        }
-    }
+
 
     public void PlayPrintAnim()
     {
         // 播放动画
         anim.SetTrigger("airship");
+        anim.SetTrigger("move11");
 
         // 实例化并播放粒子系统
         InstantiateAndPlayParticleSystem();
@@ -36,8 +28,7 @@ public class smzmove : MonoBehaviour
     {
         if (secondObjectAnimator != null)
         {
-            // 播放第二个物体的动画
-            secondObjectAnimator.SetTrigger("move");
+            secondObjectAnimator.SetTrigger("move11");
         }
     }
 
