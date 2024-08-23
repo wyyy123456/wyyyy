@@ -762,29 +762,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 560cc31196ab140ca9bfcd709edb3da4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4129020388111424492}
+      addedObject: {fileID: 5291934206972130067}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 560cc31196ab140ca9bfcd709edb3da4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5291934206972130067}
+      addedObject: {fileID: 8830304560281702842}
   m_SourcePrefab: {fileID: 100100000, guid: 560cc31196ab140ca9bfcd709edb3da4, type: 3}
 --- !u!1 &2348680960115620631 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 560cc31196ab140ca9bfcd709edb3da4, type: 3}
   m_PrefabInstance: {fileID: 3195683483127580230}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4129020388111424492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2348680960115620631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04de3a30d0134f4d97b2c0e6ac05afb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skin: {fileID: 7373704267625897556}
 --- !u!65 &5291934206972130067
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -806,6 +793,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0017139649, y: 0.0017812166, z: 0.00063908147}
   m_Center: {x: 2.3283064e-10, y: 0, z: 0}
+--- !u!114 &8830304560281702842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2348680960115620631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b948812ea7640e4a8eb6ee3fc99729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skin: {fileID: 7373704267625897556}
 --- !u!4 &3158114394510614957 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 560cc31196ab140ca9bfcd709edb3da4, type: 3}
@@ -942,6 +942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skin: {fileID: 8894945226792249301}
+  videoPlayer: {fileID: 0}
+  videoUI: {fileID: 0}
 --- !u!65 &7947914228065218085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1254,6 +1256,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skin: {fileID: 9127375787679253942}
+  videoPlayer: {fileID: 0}
+  videoUI: {fileID: 0}
 --- !u!65 &865817822333945728
 BoxCollider:
   m_ObjectHideFlags: 0

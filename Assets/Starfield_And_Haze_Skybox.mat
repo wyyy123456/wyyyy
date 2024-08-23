@@ -54,7 +54,7 @@ Material:
     m_Ints: []
     m_Floats:
     - <noninit>: 1
-    - _Exposure: 2
+    - _Exposure: 1.5
     - _Rotation: 23
     m_Colors:
     - <noninit>: {r: 1, g: 1, b: 1, a: 1}

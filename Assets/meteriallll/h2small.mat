@@ -236,7 +236,7 @@ Material:
     - _nor2stre: 0.5
     - _saturation: 0
     m_Colors:
-    - _BaseColor: {r: 0.2916963, g: 0.4278967, b: 0.5377358, a: 1}
+    - _BaseColor: {r: 0.37112856, g: 0.4900216, b: 0.5660378, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 0.28773582, g: 1, b: 0.97929084, a: 1}
@@ -245,7 +245,7 @@ Material:
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 0.57888645, g: 0.49411762, b: 1, a: 0.5}
-    - _SColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
+    - _SColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SpecularColor: {r: 0.49778977, g: 1, b: 0.4575472, a: 1}
     - _Tilling: {r: 2, g: 2, b: 0, a: 0}

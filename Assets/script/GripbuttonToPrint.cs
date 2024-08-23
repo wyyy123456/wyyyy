@@ -6,18 +6,37 @@ public class GripbuttonToPrint : MonoBehaviour
     public Animator anim;
     public GameObject particlePrefab;
     public Transform spawnLocation;
-    public GameObject currentObjectInstance;
-    public GameObject newObjectPrefab;
+    public GameObject currentObjectInstance; // 当前动态生成的物体
+    public GameObject newObjectInScene; // 场景中已存在但渲染器关闭的物体
     public Transform replacementPosition;
     public float replacementDelay = 2f; // 替换延迟时间
     float counter = 2.0f;
-    public string excludeChildName = "Quad1"; // 设置不想被渲染的子物体名字
+
 
 
     public void PlayPrintAnim()
     {
+        // 播放动画
         anim.SetTrigger("3dprint");
+
+        // 销毁当前物体实例
+        if (currentObjectInstance != null)
+        {
+            // 确保只销毁动态生成的预制体实例
+            if (currentObjectInstance.scene.name == null)
+            {
+                Destroy(currentObjectInstance.gameObject);
+            }
+            else
+            {
+                Debug.LogWarning("当前物体不是动态生成的预制体，无法销毁。");
+            }
+        }
+
+        // 播放粒子效果
         InstantiateAndPlayParticleSystem();
+
+        // 延迟渲染新物体
         StartCoroutine(DelayedRenderObject());
     }
 
@@ -43,38 +62,30 @@ public class GripbuttonToPrint : MonoBehaviour
         yield return new WaitForSeconds(replacementDelay);
 
         // 渲染新的物体
-        RenderObjects();
+        ActivateObjectInScene();
     }
 
-    public void RenderObjects()
+    public void ActivateObjectInScene()
     {
-        // 确保有一个新的物体实例化
-        if (newObjectPrefab != null)
+        // 确保场景中存在新物体
+        if (newObjectInScene != null)
         {
-            // 实例化新物体
-            GameObject newObjectInstance = Instantiate(newObjectPrefab, replacementPosition.position, replacementPosition.rotation);
+            // 设置新物体的位置和旋转（如果需要的话）
+            newObjectInScene.transform.position = replacementPosition.position;
+            newObjectInScene.transform.rotation = replacementPosition.rotation;
 
-            // 启用新物体的渲染器，但排除特定子物体
-            Renderer[] newRenderers = newObjectInstance.GetComponentsInChildren<Renderer>();
-            foreach (Renderer renderer in newRenderers)
+            // 启用渲染器
+            Renderer[] renderers = newObjectInScene.GetComponentsInChildren<Renderer>();
+            foreach (Renderer renderer in renderers)
             {
-                if (renderer.gameObject.name != excludeChildName)
-                {
-                    renderer.enabled = true;
-                }
+                renderer.enabled = true;
             }
 
             // 设置新物体的父级为当前物体的父级
-            newObjectInstance.transform.SetParent(replacementPosition.parent);
+            newObjectInScene.transform.SetParent(replacementPosition.parent);
 
-            // 销毁当前物体实例
-            if (currentObjectInstance != null)
-            {
-                Destroy(currentObjectInstance.gameObject);
-            }
-
-            // 更新 currentObjectInstance 引用为新物体实例
-            currentObjectInstance = newObjectInstance;
+            // 更新 currentObjectInstance 引用为新物体
+            currentObjectInstance = newObjectInScene;
         }
     }
 }
