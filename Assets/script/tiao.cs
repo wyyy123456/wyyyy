@@ -8,8 +8,6 @@ public class tiao : MonoBehaviour
     public GameObject particleSystemPrefab2; // 第二个粒子系统预设体
     public Transform spawnLocation1; // 第一个粒子系统生成位置
     public Transform spawnLocation2; // 第二个粒子系统生成位置
-    public float scaleGrowthRate = 0.5f; // 粒子系统的增长速度
-    public float maxScale = 10.0f; // 粒子系统的最大尺寸
     public GameObject fadeScreen; // 黑幕UI元素
     private float counter = 2.0f;
 
@@ -31,35 +29,7 @@ public class tiao : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        counter -= Time.deltaTime;
-
-        if (counter <= 0)
-        {
-            counter = 10.0f;
-            Jump();
-        }
-        if (instantiatedParticleSystem1 != null)
-        {
-            // Increment the scale of the first particle system
-            Vector3 currentScale = instantiatedParticleSystem1.transform.localScale;
-            Vector3 newScale = currentScale + Vector3.one * scaleGrowthRate * Time.deltaTime;
-
-            // Clamp the scale to the maximum size
-            instantiatedParticleSystem1.transform.localScale = Vector3.Min(newScale, Vector3.one * maxScale);
-        }
-
-        if (instantiatedParticleSystem2 != null)
-        {
-            // Increment the scale of the second particle system
-            Vector3 currentScale = instantiatedParticleSystem2.transform.localScale;
-            Vector3 newScale = currentScale + Vector3.one * scaleGrowthRate * Time.deltaTime;
-
-            // Clamp the scale to the maximum size
-            instantiatedParticleSystem2.transform.localScale = Vector3.Min(newScale, Vector3.one * maxScale);
-        }
-    }
+  
 
     public void Jump()
     {
@@ -124,8 +94,5 @@ public class tiao : MonoBehaviour
 
         // Fade in
         fadeScreenScript.FadeIn();
-
-        // Optionally wait for the fade in to complete
-        // yield return new WaitForSeconds(fadeScreenScript.fadeDuration);
     }
 }
