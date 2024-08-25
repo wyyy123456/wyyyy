@@ -261,7 +261,7 @@ Material:
     - _saturation: 2.82
     m_Colors:
     - _BColor: {r: 0, g: 0, b: 1, a: 1}
-    - _BaseColor: {r: 0.5304824, g: 0.7943151, b: 0.8584906, a: 1}
+    - _BaseColor: {r: 0.5330188, g: 0.9110512, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EColor: {r: 0, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
