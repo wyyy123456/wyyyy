@@ -210,7 +210,7 @@ Material:
     - _ZWrite: 1
     - __dummy__: 0
     m_Colors:
-    - _BaseColor: {r: 0.6421324, g: 0.7171057, b: 0.735849, a: 1}
+    - _BaseColor: {r: 0.57965463, g: 0.7033085, b: 0.735849, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 1, g: 0.9945061, b: 0.8443396, a: 1}

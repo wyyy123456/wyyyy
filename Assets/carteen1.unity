@@ -6817,13 +6817,24 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1353907717}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8059801596075752100, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751926520}
     - targetCorrespondingSourceObject: {fileID: 8650654345620415480, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 212663730}
+    - targetCorrespondingSourceObject: {fileID: 8650654345620415480, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 212663731}
     - targetCorrespondingSourceObject: {fileID: 8701781207238929413, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 212663729}
   m_SourcePrefab: {fileID: 100100000, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+--- !u!1 &212663722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8059801596075752100, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
+  m_PrefabInstance: {fileID: 212663721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &212663723 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7934763819442458934, guid: 4e660da2419d1614198b2c073ddf863d, type: 3}
@@ -6947,6 +6958,23 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &212663731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212663728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d3d454634324b4fa1b279de917e07c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyAction: {fileID: 4291840731984443497, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  leftHand: {fileID: 212663726}
+  head: {fileID: 212663727}
+  flyingSpeed: 8
+  maxSpeed: 10
 --- !u!1001 &217931545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30494,6 +30522,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1666416380}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1751926520
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212663722}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1755973809
 GameObject:
   m_ObjectHideFlags: 0
@@ -30560,7 +30615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -117.551, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400.53, y: -398.70193}
+  m_AnchoredPosition: {x: -400.3, y: -398.70193}
   m_SizeDelta: {x: 48.04, y: 26.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771374977
@@ -38312,6 +38367,7 @@ SceneRoots:
   - {fileID: 1928593677}
   - {fileID: 1295174177}
   - {fileID: 54463920}
+  - {fileID: 1882477477}
   - {fileID: 1715304141}
   - {fileID: 1155423067}
   - {fileID: 17144309}
@@ -38327,7 +38383,6 @@ SceneRoots:
   - {fileID: 6569156}
   - {fileID: 1408943654}
   - {fileID: 656405935}
-  - {fileID: 1882477477}
   - {fileID: 1394305324}
   - {fileID: 2108089727}
   - {fileID: 1229293503}
