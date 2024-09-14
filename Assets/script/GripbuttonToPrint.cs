@@ -12,17 +12,6 @@ public class GripbuttonToPrint : MonoBehaviour
     public float replacementDelay = 2f; // 替换延迟时间
     float counter = 2.0f;
 
-private void Update()
-    {
-        counter -= Time.deltaTime;
-        if (counter <= 0)
-        {
-            counter = 10.0f;
-            PlayPrintAnim();
-            
-        }
-    }
-
     public void PlayPrintAnim()
     {
         // 播放动画
@@ -73,30 +62,24 @@ private void Update()
         // 等待指定的延迟时间
         yield return new WaitForSeconds(replacementDelay);
 
-        // 渲染新的物体
         ActivateObjectInScene();
     }
 
     public void ActivateObjectInScene()
     {
-        // 确保场景中存在新物体
         if (newObjectInScene != null)
         {
-            // 设置新物体的位置和旋转（如果需要的话）
             newObjectInScene.transform.position = replacementPosition.position;
             newObjectInScene.transform.rotation = replacementPosition.rotation;
 
-            // 启用渲染器
             Renderer[] renderers = newObjectInScene.GetComponentsInChildren<Renderer>();
             foreach (Renderer renderer in renderers)
             {
                 renderer.enabled = true;
             }
 
-            // 设置新物体的父级为当前物体的父级
             newObjectInScene.transform.SetParent(replacementPosition.parent);
 
-            // 更新 currentObjectInstance 引用为新物体
             currentObjectInstance = newObjectInScene;
         }
     }

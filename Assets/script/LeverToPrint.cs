@@ -13,16 +13,6 @@ public class LeverToPrint : MonoBehaviour
     public float replacementDelay = 2f; // 替换延迟时间
     float counter = 2.0f;
 
-private void Update()
-    {
-        counter -= Time.deltaTime;
-        if (counter <= 0)
-        {
-            counter = 10.0f;
-            PlayPrintAnim();
-           
-        }
-    }
 
 
     public void PlayPrintAnim()
