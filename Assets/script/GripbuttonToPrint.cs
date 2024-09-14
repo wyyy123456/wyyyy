@@ -28,18 +28,21 @@ private void Update()
         // 播放动画
         anim.SetTrigger("3dprint");
 
+        GameObject objectToDestroy = GameObject.Find("meat jitui(1)");
+
         // 销毁当前物体实例
-        if (currentObjectInstance != null)
+        if (objectToDestroy != null)
         {
             // 确保只销毁动态生成的预制体实例
-            if (currentObjectInstance.scene.name == null)
-            {
-                Destroy(currentObjectInstance.gameObject);
-            }
-            else
-            {
-                Debug.LogWarning("当前物体不是动态生成的预制体，无法销毁。");
-            }
+            //if (currentObjectInstance.scene.name == null)
+            //{
+                
+                Destroy(objectToDestroy);
+            //}
+            //else
+            //{
+            //    Debug.LogWarning("当前物体不是动态生成的预制体，无法销毁。");
+            //}
         }
 
         // 播放粒子效果
