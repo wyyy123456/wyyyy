@@ -12,33 +12,34 @@ public class GripbuttonToPrint : MonoBehaviour
     public float replacementDelay = 2f; // 替换延迟时间
     float counter = 2.0f;
 
+
     public void PlayPrintAnim()
     {
         // 播放动画
         anim.SetTrigger("3dprint");
 
-        GameObject objectToDestroy = GameObject.Find("meat jitui(1)");
-
-        // 销毁当前物体实例
-        if (objectToDestroy != null)
-        {
-            // 确保只销毁动态生成的预制体实例
-            //if (currentObjectInstance.scene.name == null)
-            //{
-                
-                Destroy(objectToDestroy);
-            //}
-            //else
-            //{
-            //    Debug.LogWarning("当前物体不是动态生成的预制体，无法销毁。");
-            //}
-        }
+        // 启动协程延迟销毁当前物体
+        StartCoroutine(DelayedDestroy());
 
         // 播放粒子效果
         InstantiateAndPlayParticleSystem();
 
         // 延迟渲染新物体
         StartCoroutine(DelayedRenderObject());
+    }
+
+    // 延迟2秒后销毁当前物体
+    private IEnumerator DelayedDestroy()
+    {
+        yield return new WaitForSeconds(2f); // 等待2秒
+
+        GameObject objectToDestroy = GameObject.Find("meat jitui (1)");
+
+        // 销毁当前物体实例
+        if (objectToDestroy != null)
+        {
+            Destroy(objectToDestroy);
+        }
     }
 
     public void InstantiateAndPlayParticleSystem()

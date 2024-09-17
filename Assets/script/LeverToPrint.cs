@@ -8,7 +8,7 @@ public class LeverToPrint : MonoBehaviour
     public GameObject particlePrefab;
     public Transform spawnLocation;
     public GameObject currentObjectInstance;
-    public GameObject newObjectPrefab; 
+    public GameObject newObjectInScene;
     public Transform replacementPosition;
     public float replacementDelay = 2f; // 替换延迟时间
     float counter = 2.0f;
@@ -18,13 +18,30 @@ public class LeverToPrint : MonoBehaviour
     public void PlayPrintAnim()
     {
         anim.SetTrigger("Print");
+         // 启动协程延迟销毁当前物体
+        StartCoroutine(DelayedDestroy());
+
+        // 播放粒子效果
         InstantiateAndPlayParticleSystem();
-        StartCoroutine(DelayedReplaceObject());
-         //play vfx
-        //Instantiate(xxx);
-        //play sfx
-        //xxx.PlayOneShot();
+
+        // 延迟渲染新物体
+        StartCoroutine(DelayedRenderObject());
     }
+
+    // 延迟2秒后销毁当前物体
+    private IEnumerator DelayedDestroy()
+    {
+        yield return new WaitForSeconds(2f); // 等待2秒
+
+        GameObject objectToDestroy = GameObject.Find("meat jitui");
+
+        // 销毁当前物体实例
+        if (objectToDestroy != null)
+        {
+            Destroy(objectToDestroy);
+        }
+    }
+
     public void InstantiateAndPlayParticleSystem()
     {
         if (particlePrefab != null && spawnLocation != null)
@@ -38,36 +55,33 @@ public class LeverToPrint : MonoBehaviour
             {
                 particleSystem.Play();
             }
-
         }
     }
-    private IEnumerator DelayedReplaceObject()
+
+    public IEnumerator DelayedRenderObject()
     {
         // 等待指定的延迟时间
         yield return new WaitForSeconds(replacementDelay);
 
-        // 替换物体
-        ReplaceObject();
+        ActivateObjectInScene();
     }
-   public void ReplaceObject()
+
+    public void ActivateObjectInScene()
     {
-        if (currentObjectInstance != null && newObjectPrefab != null && replacementPosition != null)
+        if (newObjectInScene != null)
         {
-            // 销毁当前物体实例
-            Renderer[] renderers = currentObjectInstance.GetComponentsInChildren<Renderer>();
+            newObjectInScene.transform.position = replacementPosition.position;
+            newObjectInScene.transform.rotation = replacementPosition.rotation;
+
+            Renderer[] renderers = newObjectInScene.GetComponentsInChildren<Renderer>();
             foreach (Renderer renderer in renderers)
             {
-                renderer.enabled = false;
+                renderer.enabled = true;
             }
 
-            // 实例化新的物体
-            GameObject newObject = Instantiate(newObjectPrefab, replacementPosition.position, replacementPosition.rotation);
+            newObjectInScene.transform.SetParent(replacementPosition.parent);
 
-            // 可选：设置新物体的父级为当前物体的父级，以保持层次结构
-            newObject.transform.SetParent(replacementPosition.parent);
-
-            // 更新 currentObjectInstance 引用为新的物体实例
-            currentObjectInstance = newObject;
+            currentObjectInstance = newObjectInScene;
         }
     }
 }
